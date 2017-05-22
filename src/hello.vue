@@ -13,5 +13,7 @@
     }
 </script>
 <style>
-
+    .tpl{
+        color: red;
+    }
 </style>

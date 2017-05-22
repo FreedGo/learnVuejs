@@ -5,7 +5,7 @@ var webpack = require('webpack');
 
 module.exports = {
 	entry:{
-	app:'./src/main.js',
+	app:'./src/hello.js',
 	vendor: ['vue', 'vue-router', 'mint-ui','vue-preview']
 	}, //webpack要打包的源文件是 src/main.js
 	output:{
