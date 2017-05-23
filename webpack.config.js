@@ -6,7 +6,6 @@ var webpack = require('webpack');
 module.exports = {
 	entry:{
 	app:'./src/hello.js',
-	vendor: ['vue', 'vue-router', 'mint-ui','vue-preview']
 	}, //webpack要打包的源文件是 src/main.js
 	output:{
 		path:'./dist/', //告诉webpack将来所有的打包文件都要放到这个目录下
@@ -51,15 +50,9 @@ module.exports = {
     },
 	 plugins: [
 	    new HtmlwebpackPlugin({
-	      title: 'index',  //生成的页面标题
+	      title: 'hello',  //生成的页面标题
 	      filename: 'index.html', //生成的文件名称
-     	  template: 'index1.html' //根据index1.html这个模板来生成(这个文件请你自己生成)
-	    }),
-	    new webpack.optimize.CommonsChunkPlugin('p1.js',['vendor']),
-	     new webpack.optimize.UglifyJsPlugin({
-		      compress: {
-		        warnings: false
-		      }
-		    })
+     	  template: 'hello.html' //根据index1.html这个模板来生成(这个文件请你自己生成)
+	    })
 	  ]
 }

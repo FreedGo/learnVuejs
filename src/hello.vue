@@ -1,13 +1,19 @@
 <template>
     <div class="tpl">
-        {{msg}}
+        <div class="title1">
+            {{msg}}
+        </div>
+        <div class="title2">
+            <input type="text" v-model="username">
+        </div>
     </div>
 </template>
 <script>
     export default {
         data(){
             return {
-                msg:'Hello Vuejs'
+                msg:'Hello Vuejs,泪奔,终于跑起来了',
+                username:'我叫张三'
             }
         }
     }
