@@ -33,9 +33,19 @@
         <div class="title4" >
             <button v-on:click="click">点击我</button>
         </div>
+        <h3>7.使用v-for</h3>
+        <ul class="title6" >
+            <li v-for="(item,index) in list">
+                {{index}}{{item.name}}+{{item.sex}}+{{item.age}}+{{item.work}}+
+            </li>
+        </ul>
+        <h3>7.使用子组件</h3>
+        <!--使用子组件-->
+        <son :toSon1="toSon"></son>
     </div>
 </template>
 <script>
+	import son from './components/son.vue';//导入子组建
     export default {
         data(){
             return {
@@ -47,12 +57,22 @@
 	            dec1:'我是第1名',
 	            dec2:'我是第2名',
 	            dec3:'我是第3名',
+                toSon:'好好学习，天天向上',
+                list:[
+                    { name:'张三',sex:'男',age:28,work:'jser'},
+	                { name:'李四',sex:'女',age:28,work:'phper'},
+	                { name:'王五',sex:'不男不女',age:28,work:'javaer'},
+	                { name:'宋六',sex:'外星人',age:28,work:'c++er'}
+                ]
             }
         },
         methods:{
         	click(){
         		alert('1');
             }
+        },
+        components:{
+            son //注册子组件
         }
     }
 </script>
