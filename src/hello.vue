@@ -42,10 +42,13 @@
         <h3>7.使用子组件</h3>
         <!--使用子组件-->
         <son :toSon1="toSon"></son>
+        <h3>8.我也使用子组件</h3>
+        <stus :students="list"></stus>
     </div>
 </template>
 <script>
 	import son from './components/son.vue';//导入子组建
+    import stus from './components/stus.vue';
     export default {
         data(){
             return {
@@ -72,7 +75,8 @@
             }
         },
         components:{
-            son //注册子组件
+            son, //注册子组件
+	        stus
         }
     }
 </script>
