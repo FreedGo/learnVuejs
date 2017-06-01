@@ -6,6 +6,13 @@
         <div class="title2">
             <input type="text" v-model="username">
         </div>
+        <div class="luyou">
+            <h1>路由</h1>
+            <router-link to="/accouont/login/">登录</router-link>
+            <router-link to="/accouont/login/">注册</router-link>
+            <!--占位-->
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 <script>
