@@ -50,6 +50,17 @@
         <router-link to="/account/login/freed/123456">登录</router-link>
         <router-link to="/account/login/freed/185165">注册</router-link>
         <router-view></router-view>
+
+        <h3>7.使用过滤器和计算属性</h3>
+        <!--使用子组件-->
+        <input type="text" v-model="name">
+
+        <hr>
+        {{name|toLowerCaseStr|rePlace('i')}}
+
+        <hr>
+        {{toUpperCaseStr}}
+
     </div>
 </template>
 <script>
@@ -68,12 +79,21 @@
 	            dec2:'我是第2名',
 	            dec3:'我是第3名',
                 toSon:'好好学习，天天向上',
+                name:'',
                 list:[
                     { name:'张三',sex:'男',age:28,work:'jser'},
 	                { name:'李四',sex:'女',age:28,work:'phper'},
 	                { name:'王五',sex:'不男不女',age:28,work:'javaer'},
 	                { name:'宋六',sex:'外星人',age:28,work:'c++er'}
                 ]
+            }
+        },
+        filters:{
+        	toLowerCaseStr(input){
+        		return input.toLowerCase();
+            },
+            rePlace(input,s){
+        		return input.replace(s,'傻')
             }
         },
         methods:{
@@ -84,6 +104,11 @@
         components:{
             son, //注册子组件
 	        stus
+        },
+        computed:{
+	        toUpperCaseStr(){
+	        	return this.name.toUpperCase()
+            }
         }
     }
 </script>

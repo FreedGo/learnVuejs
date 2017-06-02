@@ -11,14 +11,16 @@ import login from './login.vue';
 import reg from  './reg.vue';
 
 Vue.use(vueRouter);
-
+// Vue.filter('toUpperCaseStr',function (input) {
+//     return input.toUpperCase()
+// });
 
 var router = new vueRouter({
     routes:[
 	    {name:'login',path:'/account/login/:username/:password',component:login},
 	    {name:'reg',path:'/account/login/:username/:phone',component:reg},
     ]
-})
+});
 
 new Vue({
     el:'#hello',

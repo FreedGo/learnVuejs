@@ -4,6 +4,9 @@
 		<p>用户名：{{this.$route.params.username}}</p>
 		<p>密码：{{this.$route.params.password}}</p>
 	</div>
+
+
+
 </template>
 <script>
 	export default{
