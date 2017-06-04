@@ -1,22 +1,23 @@
 /**
  * Created by Freed on 2017/5/22.
  */
-// 1.导入相关包
-import Vue from 'vue';                    //引入vue
-import vueRouter from  'vue-router';      //
+import Vue from 'vue';
+import vueRouter from 'vue-router';
 
 
-// 2.导入组件
-import hello from './hello.vue';          //引入vue模板
-import Login from './login.vue';          //引入vue模板
-import Reg from './reg.vue';              //引入vue模板
+import hello from './hello.vue';
+import login from './login.vue';
+import reg from  './reg.vue';
 
-Vue.use(vueRouter);                       //vue使用路由这个模块
+Vue.use(vueRouter);
+// Vue.filter('toUpperCaseStr',function (input) {
+//     return input.toUpperCase()
+// });
 
-let router = new vueRouter({              //配置路由
-    route:[
-        {name:'Login',path:'/account/login/:username/:password',component:Login},
-        {name:'Reg',path:'/account/reg/:username/:phone',component:Reg}
+var router = new vueRouter({
+    routes:[
+	    {name:'login',path:'/account/login/:username/:password',component:login},
+	    {name:'reg',path:'/account/login/:username/:phone',component:reg},
     ]
 });
 
